@@ -1,32 +1,51 @@
 /* src/components/Header.css */
-
 .gn-header {
-  background: linear-gradient(to right, rgb(58, 0, 0), rgb(0, 0, 0), rgb(63, 0, 0));
-  padding: 20px 40px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+background: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: white;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  padding: 1rem 3rem;
 }
 
-.gn-logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  letter-spacing: 1px;
+.gn-logo img {
+  height: 50px;
+  filter: drop-shadow(0 0 5px red);
+}
+
+.gn-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
 }
 
 .gn-nav a {
-  margin-left: 30px;
-  color: white;
   text-decoration: none;
-  font-size: 1rem;
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  position: relative;
   transition: color 0.3s ease;
 }
 
+.gn-nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: red;
+  left: 0;
+  bottom: -4px;
+  transition: 0.3s;
+}
+
 .gn-nav a:hover {
-  color: #ff4d4d;
+  color: red;
+}
+
+.gn-nav a:hover::after {
+  width: 100%;
 }
