@@ -17,8 +17,8 @@ const Header = () => {
       </div>
       <nav className="gn-nav">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Store</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/store">Store</a></li>
           <li><a href="#">Library</a></li>
           <li><a href="#">Profile</a></li>
         </ul>
