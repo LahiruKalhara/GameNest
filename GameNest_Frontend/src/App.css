@@ -5,3 +5,8 @@
   box-sizing: border-box;
   
 }
+
+body {
+  background: radial-gradient(circle at top left, #2d0000, #000000 60%);
+  overflow-x: hidden;
+}
