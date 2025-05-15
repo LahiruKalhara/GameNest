@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import FeaturedBanner from '../components/FeaturedBanner'
 import LatestGames from '../components/LatestGames'
 import FreeGames from '../components/FreeGames'
+import ComingSoon from '../components/ComingSoon'
 
 function StorePage() {
   return (
@@ -12,6 +13,7 @@ function StorePage() {
         <FeaturedBanner />
         <LatestGames />
         <FreeGames />
+        <ComingSoon />
         <Footer />
     </>
   )
