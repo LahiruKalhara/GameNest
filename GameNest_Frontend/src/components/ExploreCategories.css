@@ -1,0 +1,119 @@
+.explore-categories {
+  position: relative;
+  padding: 4rem 2rem;
+  background: radial-gradient(circle at top left, #1a0000, #000000 60%);
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.background-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+/* rest of the styles remain unchanged... */
+
+
+/* 🔴 RED ANIMATED BACKGROUND LINES */
+.explore-categories::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: repeating-linear-gradient(
+    135deg,
+    rgba(255, 0, 0, 0.15),
+    rgba(255, 0, 0, 0.15) 2px,
+    transparent 2px,
+    transparent 8px
+  );
+  animation: moveLines 14s linear infinite;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.explore-categories.aos-animate::before {
+  opacity: 1;
+}
+
+@keyframes moveLines {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* -------------------- */
+.explore-categories h2 {
+  font-size: 3rem;
+  margin-bottom: 2.5rem;
+  letter-spacing: 1.5px;
+  z-index: 2;
+  position: relative;
+}
+
+.categories-grid {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem 0;
+  z-index: 2;
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+.category-card {
+  flex: 0 0 auto;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+}
+
+.category-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.category-card .overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0.7rem 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+  color: white;
+  font-weight: 600;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  text-align: center;
+}
