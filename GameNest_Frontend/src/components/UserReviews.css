@@ -1,0 +1,118 @@
+.user-reviews {
+  max-width: 1100px;
+  margin: 4rem auto 6rem;
+  padding: 0 1rem;
+  opacity: 1;
+  color: #f0f0f0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.user-reviews h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-shadow: 0 0 12px #ff0000cc;
+  color: #ff2a2a;
+}
+
+.reviews-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.review-card {
+  background: rgba(40, 0, 0, 0.75);
+  border: 2px solid #ff0000cc;
+  border-radius: 12px;
+  padding: 1.6rem 1.8rem;
+  box-shadow:
+    0 0 14px #ff3300ee,
+    inset 0 0 16px #ff2200ff;
+  display: flex;
+  gap: 1rem;
+  animation: floatSideToSide 4s ease-in-out infinite;
+  will-change: transform, box-shadow;
+}
+
+.review-card:nth-child(odd) {
+  animation-delay: 0s;
+}
+.review-card:nth-child(even) {
+  animation-delay: 2s;
+}
+
+@keyframes floatSideToSide {
+  0%, 100% {
+    transform: translateX(0) scale(1) rotate(0deg);
+    box-shadow:
+      0 0 14px #ff3300ee,
+      inset 0 0 16px #ff2200ff;
+  }
+  50% {
+    transform: translateX(10px) scale(1.02) rotate(1deg);
+    box-shadow:
+      0 0 18px #ff4400ff,
+      inset 0 0 20px #ff3300ff;
+  }
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #ff0000cc;
+  box-shadow: 0 0 8px #ff0000cc;
+  flex-shrink: 0;
+}
+
+.review-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+.review-header h3 {
+  font-size: 1.2rem;
+  color: #ff4d4d;
+  text-shadow: 0 0 8px #ff1a1a;
+}
+
+.stars {
+  font-size: 1.2rem;
+  color: #ff0000cc;
+  text-shadow: 0 0 6px #ff3300cc;
+}
+
+.star {
+  margin-left: 2px;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+}
+
+.star.filled {
+  opacity: 1;
+}
+
+.review-content p {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #ddd;
+  text-shadow: 0 0 4px #ff000033;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .reviews-container {
+    grid-template-columns: 1fr;
+  }
+}
