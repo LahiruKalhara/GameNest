@@ -1,0 +1,70 @@
+.trending-section {
+  padding: 6rem 2rem;
+  background: #000;
+  color: #fff;
+  text-align: center;
+}
+
+.trending-section h2 {
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 12px rgba(255, 0, 0, 0.8);
+}
+
+.scroll-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.scroll-buttons button {
+  background-color: rgba(255, 0, 0, 0.2);
+  border: 1px solid rgba(255, 0, 0, 0.6);
+  color: #fff;
+  font-size: 1.8rem;
+  padding: 0.3rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.scroll-buttons button:hover {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+.trending-carousel {
+  display: flex;
+  overflow-x: hidden;
+  gap: 2rem;
+  padding: 0 1rem;
+  scroll-behavior: smooth;
+}
+
+.trending-card {
+  flex: 0 0 320px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 0, 0, 0.4);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.trending-card:hover {
+  transform: scale(1.03);
+  border-color: #ff0000;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+.trending-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.trending-card p {
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
