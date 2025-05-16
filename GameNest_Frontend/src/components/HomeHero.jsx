@@ -30,11 +30,15 @@ const HomeHero = () => {
       />
       <div className="hero-overlay">
         <div className="hero-content">
-          <h1 data-aos="fade-up" data-aos-duration="1200">WELCOME TO GAMENEST</h1>
-          <p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1200">
+          <h1 data-aos="fade-up" data-aos-duration="1500">WELCOME TO GAMENEST</h1>
+          <p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1500">
             Discover, download, and dive into the most epic gaming experiences.
             Power up your world with titles that thrill and worlds that inspire.
           </p>
+          <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="1500">
+  <button className="gamenest-btn">Explore Now</button>
+</div>
+
         </div>
       </div>
     </section>
